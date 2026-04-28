@@ -1444,5 +1444,12 @@ seedData();
 applyTheme(D.cfg.theme||'dark');
 rDash();
 </script>
+  <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log("Fitur Offline Aktif!"))
+      .catch((err) => console.log("Gagal aktif:", err));
+  }
+</script>
 </body>
 </html>
